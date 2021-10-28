@@ -1,0 +1,155 @@
+.home * {box-sizing: border-box;}
+.home {
+  text-align: center;
+  margin: auto;
+}
+.home > div {
+  margin: 30px auto;
+}
+
+.slider {
+  width: 100%;
+  margin-top: 10px;
+  position: relative;
+}
+.slider img {
+  width: 100%;
+  display: none;
+  box-shadow: 0px 0px 8px rgb(72, 72, 72);
+}
+.open {
+  animation: slideOut 3s linear forwards;
+}
+.slideActive {
+  display: inline-block !important;
+}
+@keyframes slideOut {
+  0% {
+    transform: rotateX(-90deg);
+    border-radius: 75%;
+    opacity: 0;
+    /* box-shadow: 0 0 8px black; */
+  }
+  15% {
+    transform: rotateX(0deg);
+    border-radius: 0%;
+    opacity: 1;
+  }
+  85% {
+    transform: rotateX(0deg);
+    border-radius: 0%;
+    opacity: 1;
+  }
+  100% {
+    transform: rotateX(90deg);
+    border-radius: 75%;
+    opacity: 0;
+    /* box-shadow: 0 0 8px black; */
+  }
+}
+
+.slider .btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  padding: 10px;
+  font-size: 4vw;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.slider .prev {
+  left: 0px;
+  border-radius: 0 5px 5px 0;
+}
+.slider .next {
+  right: 0px;
+  border-radius: 5px 0 0 5px;
+}
+.slider .btn:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+
+.dots .dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid tomato;
+  display: inline-block;
+  cursor: pointer;
+}
+.dotActive, .dot:hover {
+  background-color: tomato;
+}
+
+
+.welcome-part {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  background: rgba(213, 213, 213, 0.297) top center no-repeat;
+}
+.welcome-part .line {
+  flex: 10%;
+  position: relative;
+  text-align: center;
+}
+.welcome-part .line span {
+  height: 100%;
+  width: 5px;
+  background-color: tomato;
+  display: inline-block;
+}
+.welcome-part .text {
+  padding: 20px;
+  flex: 40%;
+  text-align: initial;
+}
+.text h1 {
+  font-family: "Merienda", cursive;
+  font-size: 3.8vw;
+  color: #4e4e4e;
+}
+.text p {
+  font-family: serif;
+  font-size: 1.5vw;
+  color: #5e5e5e;
+}
+.text button {
+  border: none;
+  background-color: #ffac57;
+  color: black;
+  padding: 5px 10px;
+  transition: all 0.3s;
+  font-weight: bold;
+  font-size: medium;
+  cursor: pointer;
+}
+.text button:hover {
+  background-color: #fd6727;
+}
+.welcome-part img {
+  flex: 50%;
+  width: 50%;
+}
+
+@media screen and (max-width: 810px) {
+  .welcome-part {
+    flex-direction: column-reverse;
+  }
+  .welcome-part .line {
+    display: none;
+  }
+  .welcome-part img {
+    width: 100%;
+  }
+  .welcome-part .text h1 {
+    font-size: 5vw;
+  }
+  .welcome-part .text p {
+    font-size: 3vw;
+  }
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Gallery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      iframe {
+        width: 100%;
+        margin: auto;
+        display: block;
+        border: none;
+        margin: 10px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <iframe scrolling='no' src="gallery/gallery.html"></iframe>
+    <iframe scrolling='no' src='slider/index.html'></iframe>
+    <script>
+      var iframe = document.getElementsByTagName("iframe");
+      for (let i = 0; i < iframe.length; i++) {
+        iframe[i].onload = function () {
+          iframe[i].style.height =
+            iframe[i].contentWindow.document.body.scrollHeight + "px";
+        };
+      }
+      window.onresize = () => {
+        for (let i = 0; i < iframe.length; i++) {
+          iframe[i].style.height =
+            iframe[i].contentWindow.document.body.scrollHeight + "px";
+        }
+      }
+    </script>
+  </body>
+</html>

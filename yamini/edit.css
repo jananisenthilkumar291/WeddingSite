@@ -1,0 +1,41 @@
+.img{
+    width: 80%;
+    height: 600px;
+}
+.htag{
+    font-size: 35px;
+    margin-top: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    cursor:pointer
+}
+.h1tag{
+    font-size: 50px;
+    margin: 10px 0;
+}
+.htag:hover{
+    color: rosybrown;
+}
+.ptag{
+    font-size: 20px;
+    font-weight: 400;
+}
+.btn.btn-outline-secondary.hove{
+    padding:4px 20px;
+    margin-top: 25px;
+    background-color:#ffc0cb;
+    color: white;
+    font-size: 20px;
+
+}
+.btn.btn-outline-secondary.hove:hover{
+    background-color: grey;
+}
+@media (max-width: 800px) {
+    .img{
+        width: 100%;
+        height: 400px;
+    }
+    .h1tag{
+        font-size: 35px;
+    }
+}

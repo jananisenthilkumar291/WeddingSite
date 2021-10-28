@@ -1,0 +1,72 @@
+body{
+    background-color: rgb(240, 227, 229);
+}
+.htag{
+    padding: 10px 10px;
+    font-family:cursive;
+    font-weight: 300;
+    font-size: 25px;
+    color: rgb(44, 43, 43);
+}
+.htae{
+    padding: 5px 7px;
+    font-family:sans-serif;
+    font-weight: 400;
+    font-size: 45px;
+
+}
+.hta{
+    font-size:20px;
+}
+.ptag{
+    margin:5px 0;
+    font-size: 18px;
+    padding: 5px;
+    
+}
+.hrtag{
+    border:1px solid pink
+}
+.tag{
+    padding: 5px 7px;
+    font-family:cursive;
+    font-weight: 400;
+    font-size: 18px;
+
+}
+.img{
+    margin-left:0;
+    height: 500px;
+    width:100%;
+}
+.ptage{
+    margin-left:0%;
+    margin-top:2%;
+    font-size: 18px;
+}
+.htagblock{
+    padding: 5px 7px;
+    font-family:cursive;
+    font-weight: 400;
+    font-size: 25px;
+    color:grey;
+}
+.card.or{
+    background-color: rgb(240, 227, 229);
+    margin-left: 20%;
+}
+.next{
+    margin-left: 70%;
+}
+@media (max-width: 800px) {
+    .card.or{
+        margin: 0;
+        width: 100% !important;
+    }
+    .htae{
+       font-size: 37px;
+    }
+    .img{
+        height: 350px;
+    }
+}

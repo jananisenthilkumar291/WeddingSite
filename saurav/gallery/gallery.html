@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="gallery.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap"
+      rel="stylesheet"
+    />
+</head>
+
+<body>
+
+    <input type="radio" name="photos" id="check1" checked>
+    <input type="radio" name="photos" id="check2">
+    <input type="radio" name="photos" id="check3">
+    <input type="radio" name="photos" id="check4">
+
+    <div class="container">
+        <h1 style="font-family: 'Merienda', cursive;" >OUR PHOTO GALLERY</h1>
+
+        <div class="top-content">
+            <h3>Photo Gallery</h3>
+            <label for="check1">All</label>
+            <label for="check2">Ceremony</label>
+            <label for="check3">Wedding</label>
+            <label for="check4">Party</label>
+        </div>
+
+        <div class="photo-gallery">
+            <div class="pic ceremony">
+                <img src="images/ceremony1.jpg" alt="">
+            </div>
+            <div class="pic wedding">
+                <img src="images/wedding1.jpg" alt="">
+            </div>
+            <div class="pic party">
+                <img src="images/party1.jpg" alt="">
+            </div>
+            <div class="pic ceremony">
+                <img src="images/ceremony2.jpg" alt="">
+            </div>
+            <div class="pic wedding">
+                <img src="images/wedding2.jpg" alt="">
+            </div>
+            <div class="pic party">
+                <img src="images/party2.jpg" alt="">
+            </div>
+            <div class="pic ceremony">
+                <img src="images/ceremony3.jpg" alt="">
+            </div>
+            <div class="pic wedding">
+                <img src="images/wedding3.jpg" alt="">
+            </div>
+            <div class="pic party">
+                <img src="images/party3.jpg" alt="">
+            </div>
+            <div class="pic ceremony">
+                <img src="images/ceremony4.jpg" alt="">
+            </div>
+            <div class="pic wedding">
+                <img src="images/wedding4.jpg" alt="">
+            </div>
+            <div class="pic party">
+                <img src="images/party4.jpg" alt="">
+            </div>
+            <div class="pic ceremony">
+                <img src="images/ceremony5.jpg" alt="">
+            </div>
+            <div class="pic wedding">
+                <img src="images/wedding5.jpg" alt="">
+            </div>
+            <div class="pic party">
+                <img src="images/party5.jpg" alt="">
+            </div>
+            <div class="pic ceremony">
+                <img src="images/ceremony6.jpg" alt="">
+            </div>
+            <div class="pic wedding">
+                <img src="images/wedding6.jpg" alt="">
+            </div>
+            <div class="pic party">
+                <img src="images/party6.jpg" alt="">
+            </div>
+            <div class="pic ceremony">
+                <img src="images/ceremony7.jpg" alt="">
+            </div>
+            <div class="pic wedding">
+                <img src="images/wedding7.jpg" alt="">
+            </div>
+            <div class="pic party">
+                <img src="images/party7.jpg" alt="">
+            </div>
+            <div class="pic ceremony">
+                <img src="images/ceremony8.jpg" alt="">
+            </div>
+            <div class="pic wedding">
+                <img src="images/wedding8.jpg" alt="">
+            </div>
+            <div class="pic party">
+                <img src="images/party8.jpg" alt="">
+            </div>
+
+        </div>
+
+    </div>
+<script>
+    let allInput = document.querySelectorAll('input[name=photos]');
+    for(let i = 0; i < allInput.length; i++){
+        allInput[i].addEventListener('click' ,function(){
+            let frames = parent.iframe;
+            for( let x = 0; x < frames.length; x++) {
+                let mainFrame = parent.parent.iframe[2];
+                mainFrame.style.height = mainFrame.contentWindow.document.body.scrollHeight + 'px';
+                frames[x].style.height = 
+                frames[x].contentWindow.document.body.scrollHeight + "px";
+            }
+          
+        })
+    }
+</script>
+
+</body>
+
+</html>

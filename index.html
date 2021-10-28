@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles/nav.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="styles/home.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville"
+      rel="stylesheet"
+    /> -->
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      iframe {
+        width: 100%;
+        margin: auto;
+        display: block;
+        border: none;
+        margin: 10px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Bar Starts -->
+    <nav class="nav-bar">
+      <span id="menu"><i class="fa fa-bars"></i></span>
+      <div class="left">
+        <span id="close" class="fa fa-times"></span>
+        <a href="#Home">HOME</a><a href="yamini/index.html">ABOUT</a
+        ><a href="yamini/index2.html">BLOG</a
+        ><a href="saurav/index.html">GALLERY</a
+        ><a href="janani/contact.html">CONTACT</a>
+      </div>
+
+      <div class="middle">
+        <div class="logo">
+          <a href="#Home"><img src="img/logo.png" alt="logo" /></a>
+        </div>
+      </div>
+
+      <div class="right">
+        <div>
+          <div class="fa fa-address-card"></div>
+          <div>
+            Address<br />
+            ...Location...
+          </div>
+        </div>
+        <div>
+          <div class="fa fa-phone"></div>
+          <div>
+            Phone<br />
+            9000000001
+          </div>
+        </div>
+        <div>
+          <div class="fa fa-clock-o" aria-hidden="true"></div>
+          <div>
+            Working Hours:<br />
+            Mon-Fri: 8am - 9pm
+          </div>
+        </div>
+      </div>
+    </nav>
+    <script>
+      document.getElementById("menu").addEventListener("click", function () {
+        document.querySelector(".nav-bar .left").style.width = "250px";
+      });
+      document.getElementById("close").addEventListener("click", function () {
+        console.log("called");
+        document.querySelector(".nav-bar .left").style.width = "0";
+      });
+    </script>
+    <!-- Navigation Bar ends -->
+
+    <section id="Home" class="home">
+      <!-- <button onclick="addAnim()" >click me to add animation</button> -->
+      <div class="slider">
+        <!-- Slides -->
+        <img src="img/slide1.webp" class="slideActive" alt="slide1" />
+        <img src="img/slide2.png" alt="slide2" />
+        <img src="img/slide3.webp" alt="slide3" />
+        <img src="img/slide4.webp" alt="slide4" />
+        <!-- Next/Prev Button -->
+        <button type="button" onclick="changeSlide(1)" class="btn next">
+          &#8250;
+        </button>
+        <button type="button" onclick="changeSlide(-1)" class="btn prev">
+          &#8249;
+        </button>
+      </div>
+      <div class="dots">
+        <span onclick="showCurrentSlide(0)" class="dot dotActive"></span>
+        <span onclick="showCurrentSlide(1)" class="dot"></span>
+        <span onclick="showCurrentSlide(2)" class="dot"></span>
+        <span onclick="showCurrentSlide(3)" class="dot"></span>
+      </div>
+      <div class="welcome-part">
+        <div class="line"><span></span></div>
+        <div style="font-family: serif" class="text">
+          <h1>
+            Welcome<br />
+            to our site
+          </h1>
+          <p>
+            Belle Fleur’s mission is to deliver a heartfelt planning experience
+            so you have a heart filled wedding day.
+          </p>
+          <p>
+            You can count on us to be calm, loving, hands-on and, most
+            importantly, professional throughout your entire planning process.
+          </p>
+          <button onclick="document.getElementById('About').scrollIntoView()" >View more...</button>
+        </div>
+        <img src="img/welcomePartImg.jpg" alt="Welcome-Image" />
+      </div>
+      <script src="scripts/home.js"></script>
+    </section>
+    <section>
+      <iframe
+        id="About"
+        scrolling="no"
+        title="About us"
+        src="yamini/index.html"
+      ></iframe>
+    </section>
+    <section>
+      <iframe
+        id="Blog"
+        scrolling="no"
+        title="Blogs"
+        src="yamini/index2.html"
+      ></iframe>
+    </section>
+    <section>
+      <iframe
+        id="Gallery"
+        src="saurav/index.html"
+        scrolling="no"
+        title="Gallery"
+      ></iframe>
+    </section>
+    <section>
+      <iframe
+        id="Contact"
+        scrolling="no"
+        title="Contact us"
+        src="janani/contact.html"
+      ></iframe>
+    </section>
+    <script>
+      var iframe = document.getElementsByTagName("iframe");
+
+      for (let i = 0; i < iframe.length; i++) {
+        iframe[i].onload = function () {
+          iframe[i].style.height =
+            iframe[i].contentWindow.document.body.scrollHeight + "px";
+        };
+      }
+      window.onresize = () => {
+        for (let i = 0; i < iframe.length; i++) {
+          iframe[i].style.height =
+            iframe[i].contentWindow.document.body.scrollHeight + "px";
+      }
+      }
+    </script>
+    <!-- Start of LiveChat (www.livechatinc.com) code -->
+<script>
+    window.__lc = window.__lc || {};
+    window.__lc.license = 12947958;
+    ;(function(n,t,c){function i(n){return e._h?e._h.apply(null,n):e._q.push(n)}var e={_q:[],_h:null,_v:"2.0",on:function(){i(["on",c.call(arguments)])},once:function(){i(["once",c.call(arguments)])},off:function(){i(["off",c.call(arguments)])},get:function(){if(!e._h)throw new Error("[LiveChatWidget] You can't use getters before load.");return i(["get",c.call(arguments)])},call:function(){i(["call",c.call(arguments)])},init:function(){var n=t.createElement("script");n.async=!0,n.type="text/javascript",n.src="https://cdn.livechatinc.com/tracking.js",t.head.appendChild(n)}};!n.__lc.asyncInit&&e.init(),n.LiveChatWidget=n.LiveChatWidget||e}(window,document,[].slice))
+</script>
+<noscript><a href="https://www.livechatinc.com/chat-with/12947958/" rel="nofollow">Chat with us</a>, powered by <a href="https://www.livechatinc.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a></noscript>
+<!-- End of LiveChat code -->
+  </body>
+</html>
